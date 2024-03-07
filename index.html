@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="tyylejä.css">
+    <body>
+
+        <h1>Juoman valitseminen</h1><br>
+        <p>Valitse alapuolelta, mitä juomaa tilaat</p>
+
+        <form name="lomake">
+            <input type="radio" name="juoma" value="kahvi">Kahvia<br>
+            <input type="radio" name="juoma" value="tee">Teetä<br>
+            <input type="radio" name="juoma" value="limsa">Limsaa<br>
+            <input type="radio" name="juoma" value="vesi">Vettä<br>
+        </form>
+
+        <button onclick="Valitse()">Valitse juomasi</button>
+
+        <p id="demo">
+        
+        <script>
+            function Valitse() {
+                var vaihtoehto = document.lomake.juoma.value;
+                document.getElementById("demo").innerHTML = "Valitsit juomaksi " + vaihtoehto;
+            }
+        </script>
+    </body>
+</html>
